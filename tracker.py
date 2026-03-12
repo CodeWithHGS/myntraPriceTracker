@@ -24,6 +24,7 @@ def send(msg):
         f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
         params={"chat_id": CHAT_ID, "text": msg}
     )
+    print(r.text)
 
 r = requests.get(URL)
 soup = BeautifulSoup(r.text, "html.parser")

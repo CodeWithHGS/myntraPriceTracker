@@ -1,7 +1,17 @@
 import requests
 from bs4 import BeautifulSoup
 import os
+from flask import Flask
 
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Tracker running"
+
+@app.route("/check")
+def check():
+    return "Check triggered"
 URL = "https://www.myntra.com/mailers/watches/sonata/sonata-chronograph-analog-with-black-dial-watch-for-men---77145km01/30690044/buy?utm_source=social_share_pdp&utm_medium=deeplink&utm_campaign=social_share_pdp_deeplink"
 
 BOT_TOKEN = os.environ["BOT_TOKEN"]

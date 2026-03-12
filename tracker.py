@@ -21,7 +21,7 @@ def send(msg):
         },
         timeout=10
     )
-    print("Telegram response:", r.text)
+    print("Telegram response:", r.text[:2000])
 
 
 # ===== HOME ROUTE =====
